@@ -1,0 +1,4 @@
+defaultProject: sql-big-query-510418
+defaultDataset: dataform
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.52
