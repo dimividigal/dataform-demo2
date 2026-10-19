@@ -49,3 +49,12 @@ FROM
   `sql-big-query-510418.dataform.clean_sales`
 GROUP BY
   category;
+
+CREATE TABLE `sql-big-query-510418.dataform.sales_top` AS
+SELECT 
+  product_name,
+  count(order_id) as contagem_de_vendas
+FROM `sql-big-query-510418.dataform.clean_sales`
+GROUP BY product_name
+ORDER BY COUNT(order_id) DESC
+LIMIT 10
